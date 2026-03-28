@@ -5,7 +5,7 @@ export const loginUser = (data) => async (dispatch) => {
     dispatch({ type: "LOGIN_REQUEST" });
 
     const res = await axios.post(
-      "http://localhost:5000/auth/login",
+      "https://d-table-backend-task.onrender.com/auth/login",
       data,
       { withCredentials: true }
     );
@@ -27,7 +27,7 @@ export const loginUser = (data) => async (dispatch) => {
 export const logoutUser = () => async (dispatch) => {
   try {
     await axios.post(
-      "http://localhost:5000/auth/logout",
+      "https://d-table-backend-task.onrender.com/auth/logout",
       {},
       { withCredentials: true }
     );

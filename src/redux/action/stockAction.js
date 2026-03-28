@@ -9,7 +9,7 @@ export const updateStock = (data) => async (dispatch) => {
     const token = localStorage.getItem("token");
 
     const res = await axios.post(
-      "http://localhost:5000/stock/updatestock",
+      "https://d-table-backend-task.onrender.com/stock/updatestock",
       data,
       {
         headers: {
@@ -38,7 +38,7 @@ export const getStock = () => async (dispatch) => {
     const token = localStorage.getItem("token");
 
     const res = await axios.get(
-      "http://localhost:5000/stock/getstock",
+      "https://d-table-backend-task.onrender.com/stock/getstock",
       {
         headers: {
           Authorization: `Bearer ${token}`,

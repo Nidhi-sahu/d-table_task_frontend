@@ -26,7 +26,7 @@ export default function Login() {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5000/auth/login",
+        "https://d-table-backend-task.onrender.com/auth/login",
         form
       );
 

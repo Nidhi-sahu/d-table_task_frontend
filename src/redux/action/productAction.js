@@ -8,7 +8,7 @@ export const getProducts = (params) => async (dispatch) => {
     
 
     const res = await axios.get(
-      "http://localhost:5000/product/get",
+      "https://d-table-backend-task.onrender.com/product/get",
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -39,7 +39,7 @@ export const updateProduct = (id, data) => async (dispatch) => {
     const token = localStorage.getItem("token");
 
     const res = await axios.put(
-      `http://localhost:5000/product/update/${id}`,
+      `https://d-table-backend-task.onrender.com/product/update/${id}`,
       data,
       {
         headers: {
@@ -68,7 +68,7 @@ export const deleteProduct = (id) => async (dispatch) => {
     const token = localStorage.getItem("token");
 
     await axios.delete(
-      `http://localhost:5000/product/delete/${id}`,
+      `https://d-table-backend-task.onrender.com/product/delete/${id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -96,7 +96,7 @@ export const addProduct = (data) => async (dispatch) => {
     const token = localStorage.getItem("token");
 
     const res = await axios.post(
-      "http://localhost:5000/product/create",
+      "https://d-table-backend-task.onrender.com/product/create",
       data,
       {
         headers: {

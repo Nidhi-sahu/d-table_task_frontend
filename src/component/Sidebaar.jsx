@@ -56,7 +56,7 @@ export default function Sidebar() {
   const handleLogout = async () => {
   try {
     await axios.post(
-      "http://localhost:5000/auth/logout",
+      "https://d-table-backend-task.onrender.com/auth/logout",
       {},
       { withCredentials: true }
     );
